@@ -29,7 +29,7 @@ describe('API do GitHub - ciclo de vida de um repositorio', () => {
       body: {
         name: repositoryName,
         description: 'Repositorio temporario do desafio de QA NEXDOM',
-        private: false,
+        private: true,
         auto_init: true
       }
   });
@@ -94,6 +94,7 @@ describe('API do GitHub - ciclo de vida de um repositorio', () => {
     criarRepositorio().then((createResponse) => {
       expect(createResponse.status).to.eq(201);
       expect(createResponse.body.name).to.eq(repositoryName);
+      expect(createResponse.body.private).to.eq(true);
     });
 
     // repositorio criado precisa aparecer em uma consulta normal
