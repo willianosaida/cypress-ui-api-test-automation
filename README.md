@@ -102,7 +102,7 @@ cypress/
       ├── pages.js                  # Ações simples de cada página
       └── modulos.js                # Fluxos completos
 features/
-  └── desafio.feature               # Cenários em Gherkin
+  └── desafio.feature               # Apenas documentação dos cenários em Gherkin
 cypress.config.js                   # Configuração do Cypress
 ```
 
