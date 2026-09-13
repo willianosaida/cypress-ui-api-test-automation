@@ -69,7 +69,26 @@ describe('API do GitHub - ciclo de vida de um repositorio', () => {
     headers: requestHeaders(),
     failOnStatusCode: false
   });
+  after(() => {
+  // Limpeza de segurança:
+  // se o teste falhar antes de excluir o repositório,
+  // este hook tenta removê-lo ao final da execução.
+  if (!githubToken() || !githubUser()) {
+    return;
+  }
 
+  return excluirRepositorio().then((cleanupResponse) => {
+    expect([204, 404]).to.include(cleanupResponse.status);
+
+    if (cleanupResponse.status === 204) {
+      cy.log('Repositório temporário removido pela limpeza de segurança.');
+    }
+
+    if (cleanupResponse.status === 404) {
+      cy.log('O repositório temporário já havia sido removido pelo teste.');
+    }
+  });
+  });
   it('deve criar, consultar, usar e excluir um repositorio', () => {
     // cria o repositorio e confere se voltou com o nome certo
     criarRepositorio().then((createResponse) => {
