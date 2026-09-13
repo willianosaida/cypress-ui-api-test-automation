@@ -18,8 +18,8 @@ Projeto de testes automatizados em Cypress para validar cenários de front-end d
 ### 1. Clonar o repositório
 
 ```bash
-git clone <url-do-repositorio>
-cd "Desafio NEXDOM"
+git clone https://github.com/willianosaida/Desafio-NEXDOM.git
+cd Desafio-NEXDOM
 ```
 
 > **Nota:** Use aspas para funcionar em qualquer terminal (Bash, PowerShell, CMD)
