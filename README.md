@@ -1,6 +1,6 @@
-# Desafio Técnico QA Pleno - NEXDOM
+# Desafio Técnico Cypress
 
-Projeto de testes automatizados em Cypress para validar cenários de front-end do site NEXDOM e o ciclo de vida de repositórios na API do GitHub.
+Projeto de testes automatizados em Cypress para validar cenários de front-end e o ciclo de vida de repositórios na API (back-end) do GitHub.
 
 ---
 
