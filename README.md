@@ -124,4 +124,9 @@ No teste de API, o desafio foi garantir que o fluxo completo (criar, consultar, 
 - **Formulário de Contato**: O envio é bloqueado via `preventDefault()` para evitar poluição da caixa de entrada real da NEXDOM
 - **Navegação de Soluções**: Acessa a página real via menu, sem rota agregadora `/solucoes/`
 
+### Cenários em Gherkin
 
+O arquivo `features/desafio.feature` documenta os cenários de negócio utilizando
+a sintaxe Gherkin. Nesta versão do projeto, ele não é executado diretamente pelo
+Cypress e funciona como documentação BDD dos testes implementados nos arquivos
+`.cy.js`.
